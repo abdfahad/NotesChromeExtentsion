@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+    <link href="Bootstrap/css/bootstrap.css" rel="stylesheet" >
+    <link href="Note.css"  rel="stylesheet">
+</head>
+<body>
+    <div id="Title" class="mb-3">
+        <input type="text" class="form-control" id="NoteTitle" placeholder="Title goes here">
+    </div>
+    <div id="Body"  class="mb-3">
+        <textarea class="form-control" id="NoteBody" rows="3" placeholder="Enter your notes here"></textarea>
+    </div>
+    <div id="btnGroup" class="d-flex justify-content-between">
+        <button id="save" type="button" class="btn btn-outline-success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+            </svg>
+        </button>
+        <button id="discard" type="button" class="btn btn-outline-danger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </button>
+    </div>
+    <script src="Bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="Note.js"></script>
+</body>
+</html> 

@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue
+}
+#NewNote{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#delete{
+    padding-right: 0px;
+}
+#edit{
+    padding-left: 0px;
+}
+.accordion{
+    min-width: 250px;
+}
+.accordion-body{
+    font-size: smaller;
+}
+/* #btnGroup{
+    display: flex;
+    justify-content: space-between;
+} */

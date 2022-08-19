@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+    min-width: 250px;
+}
+#Title{
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#Body{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.form-control{
+    font-size: smaller;
+}
+#NoteTitle{
+    font-weight: bold;
+}
+#btnGroup{
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 20px;
+}
+button.btn{
+    padding: 5px;
+}
