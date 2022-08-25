@@ -1,10 +1,26 @@
+
 document.addEventListener("DOMContentLoaded",()=>{
 
 document.getElementById("discard").addEventListener("click",()=>{
     location.href = "popup.html";
 });
+var replace = NaN;
+chrome.storage.sync.get('isEdit',(obj)=>{
+    if(obj.isEdit.edit){
+        
+        chrome.storage.sync.get('notes', (obj2)=>{
+            document.querySelector('#title input').value = obj2.notes[obj.isEdit.id].title;
+            document.querySelector('#Body textarea').value = obj2.notes[obj.isEdit.id].body;
+            replace = obj.isEdit.id;
+            chrome.storage.sync.set({'isEdit':{edit:false, id:0}});
+        })
+        
+        
+    }
+})
 
-document.getElementById("save").addEventListener("click",()=>{
+document.getElementById("save").addEventListener("click",( )=>{
+
     let title = document.querySelector('#title input').value || 'No title';
     let body = document.querySelector('#Body textarea').value || 'Oops such empty';
 
@@ -15,7 +31,12 @@ document.getElementById("save").addEventListener("click",()=>{
         if(obj.notes){
             notes_arr = [...obj.notes];
         };
-        notes_arr.push({title:title,body:body});
+
+        if(isNaN(replace)){
+            notes_arr.push({title:title,body:body});
+        }else{
+            notes_arr[replace] = {title:title,body:body};
+        };
 
         chrome.storage.sync.set({'notes':notes_arr});
         console.log(notes_arr);    
@@ -24,4 +45,3 @@ document.getElementById("save").addEventListener("click",()=>{
     location.href = "popup.html";    
 });
 });
-

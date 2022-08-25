@@ -1,3 +1,5 @@
+
+chrome.storage.sync.set({'isEdit': { edit:false , id:0}});
 document.addEventListener("DOMContentLoaded",()=>{
     var notes = [];
     chrome.storage.sync.get('notes',(obj)=>{
@@ -50,7 +52,19 @@ document.addEventListener("DOMContentLoaded",()=>{
         for(i=0; i<matchedEdit.length; i++){
             matchedEdit[i].addEventListener("click",(event)=>{
                 let id = event.currentTarget.id;
-                console.log(id);
+                id = parseInt(id.slice(4));
+
+                let nts = [];
+                chrome.storage.sync.get('notes', (obj)=>{
+                    nts = [...obj.notes];
+                    
+                    chrome.storage.sync.get('isEdit',(obj)=>{
+                        chrome.storage.sync.set({'isEdit': { edit:true , id:id}},()=>{
+                            location.href = "Note.html";
+                        });
+                    })
+                    
+                });
             });
         };
 
@@ -159,5 +173,6 @@ const Confirm = {
         });
     }
 };
+
 
 //Code from dcode@youtube 
