@@ -13,6 +13,7 @@ body{
 #Body{
     margin-left: 5px;
     margin-right: 5px;
+    margin-bottom: 5px;
 }
 .form-control{
     font-size: smaller;
@@ -28,3 +29,14 @@ body{
 button.btn{
     padding: 5px;
 }
+
+
+#the-count {
+    /* float: right; */
+    padding: 0.1rem 0 0 0;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+    text-align: right;
+    margin-left: 5px;
+    margin-right: 5px;
+  }

@@ -19,6 +19,18 @@ chrome.storage.sync.get('isEdit',(obj)=>{
     }
 })
 
+document.querySelector('textarea').addEventListener('keyup',()=> {
+    
+    var characterCount = document.querySelector('textarea').value.length,
+        current = document.querySelector('#current');
+        maximum = document.querySelector('#maximum');
+        theCount = document.querySelector('#the-count');
+      
+    console.log("Hello")
+    current.innerHTML = characterCount;
+
+});
+
 document.getElementById("save").addEventListener("click",( )=>{
 
     let title = document.querySelector('#title input').value || 'No title';

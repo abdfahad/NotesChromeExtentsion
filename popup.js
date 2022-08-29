@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded",()=>{
             let note_id =  i+1;
             console.log(note_id);
             let html = `<div id=" ${note_id} " class="accordion-item Note">
-                        <h2 class="accordion-header" id="headingOne">
+                        <h2 class="accordion-header overflow-auto" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${i}" aria-expanded="true" aria-controls="collapse${i}">
                         <p>${notes[i].title}</p>
                         </button>
                         </h2>
                         <div id="collapse${i}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
+                                <div class="accordion-body overflow-auto">
                                 <p>${notes[i].body}</p>
                                 <div class="d-inline-flex justify-content-between" style="text-align: left;width: 100%;">
                                     <button id="edit${i}" type="button" class="btn btn-link edt">

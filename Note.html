@@ -10,12 +10,18 @@
 </head>
 <body>
     <div id="title" class="mb-3">
-        <input type="text" class="form-control" id="NoteTitle" placeholder="Title goes here">
+        <input type="text" class="form-control" id="NoteTitle" maxlength="70" placeholder="Title goes here">
     </div>
-    <div id="Body"  class="mb-3">
-        <textarea class="form-control" id="NoteBody" rows="3" placeholder="Enter your notes here"></textarea>
+    <div id="Body"  class="">
+        <textarea class="form-control" id="NoteBody" rows="3" maxlength="500" placeholder="Enter your notes here"></textarea>
     </div>
-    <div id="btnGroup" class="d-flex justify-content-between">
+
+    <div id="the-count">
+        <span id="current">0</span>
+        <span id="maximum">/ 500</span>
+    </div>
+
+    <div id="btnGroup" class="d-flex justify-content-between d-block">
         <button id="save" type="button" class="btn btn-outline-success">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
                 <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>

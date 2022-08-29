@@ -16,10 +16,11 @@ body{
 }
 .accordion{
     min-width: 250px;
-    max-width: 400px;
+    max-width: 600px;
 }
 .accordion-body{
     font-size: smaller;
+    max-width: 600px;
 }
 /* #btnGroup{
     display: flex;
