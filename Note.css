@@ -4,6 +4,9 @@
 body{
     background-color: aliceblue;
     min-width: 250px;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
 }
 #title{
     margin-top: 20px;
@@ -39,4 +42,6 @@ button.btn{
     text-align: right;
     margin-left: 5px;
     margin-right: 5px;
-  }
+}
+
+
