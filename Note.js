@@ -1,7 +1,6 @@
 
 document.addEventListener("DOMContentLoaded",()=>{
 
-
 var replace = NaN;
 chrome.storage.sync.get('isEdit',(obj)=>{
     if(obj.isEdit.edit){
@@ -15,7 +14,6 @@ chrome.storage.sync.get('isEdit',(obj)=>{
         
     }
 });
-
 
 console.log(document.querySelector('textarea').value.length);
 
@@ -36,7 +34,6 @@ chrome.storage.sync.get('selected',(obj3)=>{
         document.querySelector('#current').innerHTML = document.querySelector('textarea').value.length;
         chrome.storage.sync.set({'selected':''});
 
-
         document.getElementById("save").addEventListener("click",( )=>{
             let title = document.querySelector('#title input').value || 'No title';
             let body = document.querySelector('#Body textarea').value || 'Oops such empty';
@@ -54,9 +51,7 @@ chrome.storage.sync.get('selected',(obj3)=>{
                 window.close();
             });
         
-            
         });
-
 
         document.getElementById("discard").addEventListener("click",()=>{
             window.close();

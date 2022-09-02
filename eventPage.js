@@ -19,9 +19,7 @@ chrome.storage.onChanged.addListener((changes, area)=>{
     };
 });
 
-
 chrome.contextMenus.create(contextMenuItem, ()=>{  
-
 
 chrome.contextMenus.onClicked.addListener((textData)=>{
     if(textData.menuItemId == "addToNotes" && textData.selectionText && textData.selectionText.length <= 500){

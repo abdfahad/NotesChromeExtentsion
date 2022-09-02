@@ -1,4 +1,3 @@
-
 chrome.storage.sync.set({'isEdit': { edit:false , id:0}});
 document.addEventListener("DOMContentLoaded",()=>{
     var notes = [];
@@ -41,11 +40,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
             
         };
-
-        // document.querySelectorAll(".edt").addEventListener("click",(event)=>{
-        //     let id = event.target.id;
-        //     console.log(id);
-        // });
+        
         let matchedEdit = document.querySelectorAll(".edt");
         let matchedDelele = document.querySelectorAll(".dlt");
         
@@ -95,8 +90,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
     });
-    
-    
     
     document.getElementById("NewNote").addEventListener("click",(event)=>{
         location.href = "Note.html";

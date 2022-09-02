@@ -32,10 +32,7 @@ body{
 button.btn{
     padding: 5px;
 }
-
-
 #the-count {
-    /* float: right; */
     padding: 0.1rem 0 0 0;
     font-size: 0.875rem;
     margin-bottom: 10px;
